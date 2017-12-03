@@ -5,6 +5,8 @@
         <meta charset="UTF-8"/>
         <link rel="shortcut icon" href="images/favicon.gif" />
         <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="utility.js" type="text/javascript"></script>
+        <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
     </head>
     <body>
         <!--Header Begin-->
