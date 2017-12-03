@@ -14,9 +14,9 @@
     <!--Menu Begin-->
     <div id="menu">
       <ul>
-        <li><a class="active" href="index.php"><span>Home</span></a></li>
+        <li><a href="index.php"><span>Home</span></a></li>
         <li><a href="korisnici.php"><span>Korisnici</span></a></li>
-        <li><a href="racunari.php"><span>Računari</span></a></li>
+        <li><a class="active" href="racunari.php"><span>Računari</span></a></li>
       </ul>
     </div>
     <!--Menu END-->
@@ -25,29 +25,7 @@
 <!--Header END-->
 <!--MiddleRow Begin-->
 <div id="midrow">
-  <div id="container">
-    <div class="box">
-      <h1>Korisnici</h1>
-      <a class="support" href="izvestaj.html"></a>
-      <p><a>Prikaz korisnika računara.</a><br />
-        <br />
-        <a href="izvestaj.html" class="button"><span>Prikazi</span></a></p>
-    </div>
-    <div class="box">
-      <h1>Računari</h1>
-      <a class="whyus" href="forme.html"/></a>
-      <p><a>Popis računara.</a><br />
-        <br />
-        <a href="forme.html" class="button"><span>Prikazi</span></a></p>
-    </div>
-    <div class="box last">
-      <h1>O sajtu ...</h1>
-      <a class="plan" href="osajtu.html"></a>
-      <p><a>Pomoc u radu.</a><br />
-        <br />
-        <a href="osajtu.html" class="button"><span>Prikazi</span></a></p>
-    </div>
-  </div>
+
 </div>
 <!--MiddleRow END-->
 <!--BottomRow Begin-->
