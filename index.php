@@ -29,14 +29,14 @@
             <div id="container">
                 <div class="box">
                     <h1>Korisnici</h1>
-                    <a class="support" href="korisnici.php"></a>
+                    <a class="users" href="korisnici.php"></a>
                     <p><a>Prikaz korisnika računara.</a><br />
                         <br />
                         <a href="korisnici.php" class="button"><span>Prikazi</span></a></p>
                 </div>
                 <div class="box">
                     <h1>Računari</h1>
-                    <a class="whyus" href="racunari.php"/></a>
+                    <a class="computers" href="racunari.php"/></a>
                     <p><a>Popis računara.</a><br />
                         <br />
                         <a href="racunari.php" class="button"><span>Prikazi</span></a></p>

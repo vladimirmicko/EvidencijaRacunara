@@ -45,10 +45,10 @@ h3 {font-size:14px; font-weight:bold; color:#333;}
 
 a.plan{float:left;display:block;width:83px;height:101px;background:url(images/plan.jpg) no-repeat 0px -101px;text-indent:-1000px;}
 a.plan:hover{ background-position: 0px 1px;}
-a.whyus{margin-top:10px;float:left;display:block;width:87px;height:77px;background:url(images/desktop.png) no-repeat 0px 0px;text-indent:-1000px;}
-a.whyus:hover{ background-position: 0px -78px;}
-a.support{margin-top:14px;float:left;display:block;width:83px;height:72px;background:url(images/support.jpg) no-repeat 0px 0px;text-indent:-1000px;}
-a.support:hover{ background-position: 0px -70px;}
+a.computers{margin-top:10px;float:left;display:block;width:87px;height:77px;background:url(images/desktop.png) no-repeat 0px 0px;text-indent:-1000px;}
+a.computers:hover{ background-position: 0px -78px;}
+a.users{margin-top:14px;float:left;display:block;width:83px;height:72px;background:url(images/users.jpg) no-repeat 0px 0px;text-indent:-1000px;}
+a.users:hover{ background-position: 0px -70px;}
 
 a.button{background:url(images/buttonr.gif) no-repeat right; padding:3px 0px; margin-left:2px; color:#CCCCCC; text-decoration:none; }
 .button span{background:url(images/buttonl.gif) no-repeat left; padding:3px 5px;}
