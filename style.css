@@ -111,13 +111,10 @@ a.button{background:url(images/buttonr.gif) no-repeat right; padding:3px 0px; ma
 }
 
 
-th{
-    border-bottom:1px solid black;
-}
-
-
 .feed{width:auto; float:left;}
 .feed img{ border: solid 0px; margin-top:120px; padding:0px 7px;}
 label{font-size:12px;}
 input[type="text"]{width:200px}
 input[type="radio"]{font-size:12px;}
+
+.pool-right{float: right;}
