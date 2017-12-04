@@ -3,10 +3,13 @@
     <head>
         <title>Evidencija racunara</title>
         <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="shortcut icon" href="images/favicon.gif" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="style.css" />
         <script src="utility.js" type="text/javascript"></script>
         <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
     </head>
     <body>
         <!--Header Begin-->
