@@ -1,5 +1,14 @@
-// JavaScript Document
 
+window.onload = function() {
+    document.getElementById('brisanje-id').addEventListener('click', potvrdaBrisanja(), false);
+}
+
+
+function potvrdaBrisanja()
+{
+    confirm('Da li ste sigurni?');
+}
+    
 
 function fnc()
 {
@@ -20,7 +29,7 @@ function fnc()
     el = document.getElementById("m1");
     el.style.backgroundColor = "transparent";
     el.style.color = "gray";
-    
+
 
     if (sexM.checked) {
         if (bmiN < 20.7) {

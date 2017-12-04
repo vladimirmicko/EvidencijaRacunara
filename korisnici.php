@@ -36,7 +36,6 @@
                 <br />
                 <button type="button" class="btn btn-info btn-lg pool-right" data-toggle="modal" data-target="#myModal">+</button>
 
-
                 <!--Table-->
                 <table class="table table-striped">
                     <thead>
@@ -59,21 +58,22 @@
                         if (!$rezultat)
                             die(mysqli_error($bp));
 
+//                        $function_call="onclick='someFunction(e)'";
                         while ($row = mysqli_fetch_object($rezultat)) {
                             echo "<tr>\n";
                             echo "<td>{$row->id}</td>\n";
                             echo "<td>{$row->ime}</td>\n";
                             echo "<td>{$row->prezime}</td>\n";
                             echo "<td>{$row->odeljenje}</td>\n";
-                            echo "<td><a class='btn btn-success' href='osajtu.php?ID={$row->id}'>Izmena</a></td>\n";
-                            echo "<td><a class='btn btn-danger' href='brisanje-korisnika.php?ID={$row->id}'>Brisanje</a></td>\n";
+                            echo "<td><a class='btn btn-success potvrda-brisanja' href='osajtu.php?ID={$row->id}'>Izmena</a></td>\n";
+                            echo "<td><a id='brisanje-id' class='btn btn-danger potvrda-brisanja' href='brisanje-korisnika.php?ID={$row->id}'>Brisanje</a></td>\n";
                             echo "</tr>\n";
                         }
                         ?>
                     </tbody>
                 </table>
-                
-						
+
+
                 <!-- Modal -->
                 <div class="modal fade" id="myModal" role="dialog">
                     <div class="modal-dialog">
