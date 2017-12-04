@@ -34,38 +34,42 @@
             <div class="container">
                 <!-- Trigger the modal with a button -->
                 <br />
-                <button type="button" class="btn btn-info btn-lg pool-right" data-toggle="modal" data-target="#myModal">Dodaj korisnika</button>
+                <button type="button" class="btn btn-info btn-lg pool-right" data-toggle="modal" data-target="#myModal">+</button>
 
-                
+
                 <!--Table-->
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First Name</th>
-                            <th scope="col">Last Name</th>
-                            <th scope="col">Username</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Ime</th>
+                            <th scope="col">Prezime</th>
+                            <th scope="col">Odeljenje</th>
+                            <th scope="col">Izmena</th>
+                            <th scope="col">Brisanje</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        <?php
+                        $bp = mysqli_connect("localhost", "root", "root", "evidencija_racunara");
+                        if (!$bp)
+                            die("Greska pri pristupu bazi podataka.");
+
+                        $rezultat = mysqli_query($bp, "select * from korisnici");
+                        if (!$rezultat)
+                            die(mysqli_error($bp));
+
+                        while ($row = mysqli_fetch_object($rezultat)) {
+                            echo "<tr>\n";
+                            echo "<td>{$row->id}</td>\n";
+                            echo "<td>{$row->ime}</td>\n";
+                            echo "<td>{$row->prezime}</td>\n";
+                            echo "<td>{$row->odeljenje}</td>\n";
+                            echo "<td><a href='izmena-korisnika.php?ID={$row->id}'>Izmena</a></td>\n";
+                            echo "<td><a href='brisanje-korisnika.php?ID={$row->id}'>Brisanje</a></td>\n";
+                            echo "</tr>\n";
+                        }
+                        ?>
                     </tbody>
                 </table>
 
