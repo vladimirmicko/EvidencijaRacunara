@@ -65,14 +65,15 @@
                             echo "<td>{$row->ime}</td>\n";
                             echo "<td>{$row->prezime}</td>\n";
                             echo "<td>{$row->odeljenje}</td>\n";
-                            echo "<td><a href='izmena-korisnika.php?ID={$row->id}'>Izmena</a></td>\n";
-                            echo "<td><a href='brisanje-korisnika.php?ID={$row->id}'>Brisanje</a></td>\n";
+                            echo "<td><a class='btn btn-success' href='osajtu.php?ID={$row->id}'>Izmena</a></td>\n";
+                            echo "<td><a class='btn btn-danger' href='brisanje-korisnika.php?ID={$row->id}'>Brisanje</a></td>\n";
                             echo "</tr>\n";
                         }
                         ?>
                     </tbody>
                 </table>
-
+                
+						
                 <!-- Modal -->
                 <div class="modal fade" id="myModal" role="dialog">
                     <div class="modal-dialog">
