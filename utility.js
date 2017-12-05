@@ -1,12 +1,12 @@
-
-window.onload = function() {
-    document.getElementById('brisanje-id').addEventListener('click', potvrdaBrisanja(), false);
-}
+//
+//window.onload = function() {
+//    document.getElementById('brisanje-id').addEventListener('click', potvrdaBrisanja(), false);
+//}
 
 
 function potvrdaBrisanja()
 {
-    confirm('Da li ste sigurni?');
+    return confirm('Da li ste sigurni?');
 }
     
 
