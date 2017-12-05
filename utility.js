@@ -3,12 +3,31 @@
 //    document.getElementById('brisanje-id').addEventListener('click', potvrdaBrisanja(), false);
 //}
 
+//            $(document).ready(function () {
+//                $("#myBtn").click(function () {
+//                    $("#myModal").modal();
+//                });
+//            });
 
-function potvrdaBrisanja()
+var brisanjeId;
+var izmenaId;
+
+function potvrdaBrisanja(id)
 {
-    return confirm('Da li ste sigurni?');
+    this.brisanjeId = id;
+    $("#brisanjeModal").modal();
+    
 }
     
+function izmena(id)
+{
+    this.izmenaId = id;
+    $("#izmenaModal").modal();   
+}   
+
+function brisiKorisnika(){
+    window.location.href = 'brisanje-korisnika.php?ID='+brisanjeId;
+}
 
 function fnc()
 {
