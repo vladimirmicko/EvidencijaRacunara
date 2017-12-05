@@ -34,7 +34,7 @@
             <div class="container">
                 <!-- Trigger the modal with a button -->
                 <br />
-                <button type="button" class="btn btn-info btn-lg pool-right" data-toggle="modal" data-target="#myModal">+</button>
+                <button type="button" class="btn btn-info btn-lg pool-right" data-toggle="modal" data-target="#dodavanjeModal">+</button>
 
                 <!--Table-->
                 <table class="table table-striped">
@@ -148,6 +148,42 @@
                 </div>
             </div>
         </div> 
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="dodavanjeModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:35px 50px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><span class="glyphicon glyphicon-plus"></span> Dodavanje korisnika</h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <form role="form" action="dodavanje-korisnika.php" method="post">
+                            <div class="form-group">
+                                <label for="ime"><span class="glyphicon glyphicon-user"></span> Ime</label>
+                                <input type="text" name="ime" class="form-control" id="ime" placeholder="ime"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="prezime"><span class="glyphicon glyphicon-user"></span> Prezime</label>
+                                <input type="text" name="prezime" class="form-control" id="prezime" placeholder="prezime"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="odeljenje"><span class="glyphicon glyphicon-user"></span> Odeljenje</label>
+                                <input type="text" name="odeljenje" class="form-control" id="odeljenje" placeholder="odeljenje"/>
+                            </div>
+
+                            <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-plus"></span> Unesi korisnika</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Odustani</button>
+                    </div>
+                </div>
+            </div>
+        </div>         
 
     </body>
 </html>
