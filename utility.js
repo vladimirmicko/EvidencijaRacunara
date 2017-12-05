@@ -2,12 +2,12 @@
 //window.onload = function() {
 //    document.getElementById('brisanje-id').addEventListener('click', potvrdaBrisanja(), false);
 //}
-
-//            $(document).ready(function () {
-//                $("#myBtn").click(function () {
-//                    $("#myModal").modal();
-//                });
-//            });
+//
+//$(document).ready(function () {
+//    $("#myBtn").click(function () {
+//        $("#myModal").modal();
+//    });
+//});
 
 var brisanjeId;
 var izmenaId;

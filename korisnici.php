@@ -65,8 +65,8 @@
                             echo "<td>{$row->ime}</td>\n";
                             echo "<td>{$row->prezime}</td>\n";
                             echo "<td>{$row->odeljenje}</td>\n";
-                            echo "<td><button onclick='izmena({$row->id})' class='btn btn-success'>Izmena</button></td>\n";
-                            echo "<td><button onclick='potvrdaBrisanja({$row->id})' class='btn btn-danger'>Brisanje</button></td>\n";
+                            echo "<td><button onclick='izmena({$row->id})' class='btn btn-success'><span class='glyphicon glyphicon-pencil'></span></button></td>\n";
+                            echo "<td><button onclick='potvrdaBrisanja({$row->id})' class='btn btn-danger'><span class='glyphicon glyphicon-trash'></span></button></td>\n";
                             echo "</tr>\n";
                         }
                         ?>
