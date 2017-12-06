@@ -22,8 +22,21 @@ function potvrdaBrisanja(id)
 function izmena(id)
 {
     this.izmenaId = id;
+    prikazKorisnika(id);
     $("#izmenaModal").modal();   
+    
 }   
+
+function prikazKorisnika(id) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("ime").value = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "prikazKorisnika.php?id=" + id, true);
+        xmlhttp.send();
+}
 
 function brisiKorisnika(){
     window.location.href = 'brisanje-korisnika.php?ID='+brisanjeId;

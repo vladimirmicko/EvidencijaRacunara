@@ -122,28 +122,28 @@
                 <div class="modal-content">
                     <div class="modal-header" style="padding:35px 50px;">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+                        <h4><span class="glyphicon glyphicon-plus"></span> Izmena korisnika</h4>
                     </div>
                     <div class="modal-body" style="padding:40px 50px;">
-                        <form role="form">
+                        <form role="form" action="dodavanje-korisnika.php" method="post">
                             <div class="form-group">
-                                <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
-                                <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                                <label for="ime"><span class="glyphicon glyphicon-user"></span> Ime</label>
+                                <input type="text" name="ime" class="form-control" id="ime" placeholder="ime"/>
                             </div>
                             <div class="form-group">
-                                <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-                                <input type="text" class="form-control" id="psw" placeholder="Enter password">
+                                <label for="prezime"><span class="glyphicon glyphicon-user"></span> Prezime</label>
+                                <input type="text" name="prezime" class="form-control" id="prezime" placeholder="prezime"/>
                             </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="" checked>Remember me</label>
+                            <div class="form-group">
+                                <label for="odeljenje"><span class="glyphicon glyphicon-user"></span> Odeljenje</label>
+                                <input type="text" name="odeljenje" class="form-control" id="odeljenje" placeholder="odeljenje"/>
                             </div>
-                            <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+
+                            <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-plus"></span> Unesi korisnika</button>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-                        <p>Not a member? <a href="#">Sign Up</a></p>
-                        <p>Forgot <a href="#">Password?</a></p>
+                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Odustani</button>
                     </div>
                 </div>
             </div>
