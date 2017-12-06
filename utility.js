@@ -31,7 +31,10 @@ function prikazKorisnika(id) {
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("ime").value = this.responseText;
+                var korisnik = JSON.parse(this.responseText);
+                document.getElementById("ime").value = korisnik.ime;
+                document.getElementById("prezime").value = korisnik.prezime;
+                document.getElementById("odeljenje").value = korisnik.odeljenje;
             }
         };
         xmlhttp.open("GET", "prikazKorisnika.php?id=" + id, true);

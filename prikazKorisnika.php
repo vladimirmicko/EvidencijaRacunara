@@ -13,5 +13,7 @@ if (!$rezultat)
     die(mysqli_error($bp));
 
 $row = mysqli_fetch_object($rezultat);
-echo $row->ime;
+$myJSON = json_encode($row);
+echo $myJSON;
+
 ?>
