@@ -122,7 +122,7 @@
                 <div class="modal-content">
                     <div class="modal-header" style="padding:35px 50px;">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4><span class="glyphicon glyphicon-plus"></span> Izmena korisnika</h4>
+                        <h4><span class="glyphicon glyphicon-pencil"></span> Izmena korisnika</h4>
                     </div>
                     <div class="modal-body" style="padding:40px 50px;">
                         <form role="form" action="izmena-korisnika.php" method="post">
@@ -140,7 +140,7 @@
                                 <input type="text" name="odeljenje" class="form-control" id="odeljenje" placeholder="odeljenje"/>
                             </div>
 
-                            <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-plus"></span> Izmeni korisnika</button>
+                            <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-pencil"></span> Izmeni korisnika</button>
                         </form>
                     </div>
                     <div class="modal-footer">
