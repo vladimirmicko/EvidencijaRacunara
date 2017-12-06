@@ -44,8 +44,9 @@
                             <th scope="col">Ime</th>
                             <th scope="col">Prezime</th>
                             <th scope="col">Odeljenje</th>
-                            <th scope="col">Izmena</th>
-                            <th scope="col">Brisanje</th>
+                            <th scope="col" width="5%">Računari</th>
+                            <th scope="col" width="5%">Izmena</th>
+                            <th scope="col" width="5%">Brisanje</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -65,6 +66,7 @@
                             echo "<td>{$row->ime}</td>\n";
                             echo "<td>{$row->prezime}</td>\n";
                             echo "<td>{$row->odeljenje}</td>\n";
+                            echo "<td><button onclick='prikazPC({$row->id})' class='btn btn-info'><span class='glyphicon glyphicon-eye-open'></span></button></td>\n";
                             echo "<td><button onclick='izmena({$row->id})' class='btn btn-success'><span class='glyphicon glyphicon-pencil'></span></button></td>\n";
                             echo "<td><button onclick='potvrdaBrisanja({$row->id})' class='btn btn-danger'><span class='glyphicon glyphicon-trash'></span></button></td>\n";
                             echo "</tr>\n";
@@ -184,7 +186,28 @@
                     </div>
                 </div>
             </div>
-        </div>         
+        </div>     
+        
+        
+        <!-- Modal -->
+        <div class="modal fade" id="dodavanjeModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:35px 50px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><span class="glyphicon glyphicon-plus"></span> Prikaz racunara</h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-success btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-ok"></span> Zatvori</button>
+                    </div>
+                </div>
+            </div>
+        </div>        
 
     </body>
 </html>
