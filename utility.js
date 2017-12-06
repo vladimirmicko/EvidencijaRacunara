@@ -32,6 +32,7 @@ function prikazKorisnika(id) {
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 var korisnik = JSON.parse(this.responseText);
+                document.getElementById("korisnik_id").value = korisnik.id;
                 document.getElementById("ime").value = korisnik.ime;
                 document.getElementById("prezime").value = korisnik.prezime;
                 document.getElementById("odeljenje").value = korisnik.odeljenje;

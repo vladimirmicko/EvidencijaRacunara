@@ -125,7 +125,8 @@
                         <h4><span class="glyphicon glyphicon-plus"></span> Izmena korisnika</h4>
                     </div>
                     <div class="modal-body" style="padding:40px 50px;">
-                        <form role="form" action="dodavanje-korisnika.php" method="post">
+                        <form role="form" action="izmena-korisnika.php" method="post">
+                            <input type="hidden" name="korisnik_id" id="korisnik_id"  />
                             <div class="form-group">
                                 <label for="ime"><span class="glyphicon glyphicon-user"></span> Ime</label>
                                 <input type="text" name="ime" class="form-control" id="ime" placeholder="ime"/>
@@ -139,11 +140,11 @@
                                 <input type="text" name="odeljenje" class="form-control" id="odeljenje" placeholder="odeljenje"/>
                             </div>
 
-                            <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-plus"></span> Unesi korisnika</button>
+                            <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-plus"></span> Izmeni korisnika</button>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Odustani</button>
+                        <button class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Odustani</button>
                     </div>
                 </div>
             </div>
