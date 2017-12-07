@@ -17,7 +17,6 @@ function potvrdaBrisanja(id)
 {
     this.brisanjeId = id;
     $("#brisanjeModal").modal();
-
 }
 
 function izmena(id)
@@ -44,7 +43,11 @@ function prikazKorisnika(id) {
 }
 
 function brisiKorisnika() {
-    window.location.href = 'brisanje-korisnika.php?ID=' + brisanjeId;
+    window.location.href = 'brisanje-korisnika.php?id=' + brisanjeId;
+}
+
+function brisiRacunar() {
+    window.location.href = 'brisanje-racunara.php?id=' + brisanjeId;
 }
 
 function prikazPC(id) {

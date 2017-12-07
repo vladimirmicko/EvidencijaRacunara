@@ -54,7 +54,7 @@
                         if (!$bp)
                             die("Greska pri pristupu bazi podataka.");
 
-                        $rezultat = mysqli_query($bp, "select * from racunari left join korisnici on racunari.korisnik_id=korisnici.id");
+                        $rezultat = mysqli_query($bp, "select racunari.id, proizvodjac, model, korisnici.ime from racunari left join korisnici on racunari.korisnik_id=korisnici.id");
                         if (!$rezultat)
                             die(mysqli_error($bp));
 
@@ -65,7 +65,7 @@
                             echo "<td>{$row->model}</td>\n";
                             echo "<td>{$row->ime}</td>\n";
                             echo "<td><button onclick='izmenaRacunara({$row->id})' class='btn btn-success'><span class='glyphicon glyphicon-pencil'></span></button></td>\n";
-                            echo "<td><button onclick='potvrdaBrisanjaRacunara({$row->id})' class='btn btn-danger'><span class='glyphicon glyphicon-trash'></span></button></td>\n";
+                            echo "<td><button onclick='potvrdaBrisanja({$row->id})' class='btn btn-danger'><span class='glyphicon glyphicon-trash'></span></button></td>\n";
                             echo "</tr>\n";
                         }
                         ?>
@@ -117,5 +117,27 @@
                 </div>
             </div>
         </div>     
+        
+        
+        <!-- Modal -->
+        <div class="modal fade" id="brisanjeModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:35px 50px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><span class="glyphicon glyphicon-lock"></span> Brisanje računara</h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <h2>Da li ste sigurni?</h2>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-success btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-cancel"></span> Odustani</button>
+                        <button onClick="brisiRacunar()" class="btn btn-danger btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Briši</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
     </body>
 </html>

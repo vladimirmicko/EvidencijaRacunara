@@ -6,10 +6,10 @@ if (!$bp)
 
 $id = (int) @$_GET['id'];
 
-$upit = "delete from korisnici where id=$id;";
+$upit = "delete from racunari where id=$id;";
 $rezultat = mysqli_query($bp, $upit);
 if (!$rezultat)
     die(mysqli_error($bp));
 
-header("Location: korisnici.php");
+header("Location: racunari.php");
 ?>
