@@ -200,10 +200,21 @@
                         <h4><span class="glyphicon glyphicon-plus"></span> Prikaz racunara</h4>
                     </div>
                     <div class="modal-body" style="padding:40px 50px;">
-                        <form>
-                            <select multiple class="form-control" id="PcSelect">
-                            </select>
-                        </form>
+
+
+                        <table id="prikazPCtabela" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Proizvodjac</th>
+                                    <th scope="col">Model</th>
+                                </tr>
+                            </thead>
+ 
+                        </table>                        
+
+
+
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-success btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-ok"></span> Zatvori</button>

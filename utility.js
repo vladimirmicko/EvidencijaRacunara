@@ -11,6 +11,7 @@
 
 var brisanjeId;
 var izmenaId;
+var korisnikId;
 
 function potvrdaBrisanja(id)
 {
@@ -47,20 +48,39 @@ function brisiKorisnika() {
 }
 
 function prikazPC(id) {
+    this.korisnikId = id;
+    popunaPCtabele(id);
     $("#prikazPC").modal();
+
+
+}
+
+
+function popunaPCtabele(id) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var racunari = JSON.parse(this.responseText);
+            var table = document.getElementById("prikazPCtabela");
+            var tableBody = document.createElement('tbody');
 
-            racunari.forEach(function (item) {
-                var listBox = document.getElementById("PcSelect");
-                var option = document.createElement("option");
-                option.text = "".concat(item.proizvodjac, ", ", item.model);
-                listBox.add(option);
-            })
+            racunari.forEach(function (rowData) {
+                var row = document.createElement('tr');
+                    var cell = document.createElement('td');
+                    cell.appendChild(document.createTextNode(rowData.id));
+                    row.appendChild(cell);
 
+                    var cell = document.createElement('td');
+                    cell.appendChild(document.createTextNode(rowData.proizvodjac));
+                    row.appendChild(cell);
 
+                    var cell = document.createElement('td');
+                    cell.appendChild(document.createTextNode(rowData.model));
+                    row.appendChild(cell);
+
+                tableBody.appendChild(row);
+            });
+            table.appendChild(tableBody);
         }
     };
     xmlhttp.open("GET", "prikazPC.php?id=" + id, true);
