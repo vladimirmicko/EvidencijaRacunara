@@ -187,10 +187,10 @@
                 </div>
             </div>
         </div>     
-        
-        
+
+
         <!-- Modal -->
-        <div class="modal fade" id="dodavanjeModal" role="dialog">
+        <div class="modal fade" id="prikazPC" role="dialog">
             <div class="modal-dialog">
 
                 <!-- Modal content-->
@@ -200,7 +200,10 @@
                         <h4><span class="glyphicon glyphicon-plus"></span> Prikaz racunara</h4>
                     </div>
                     <div class="modal-body" style="padding:40px 50px;">
-                        
+                        <form>
+                            <select multiple class="form-control" id="PcSelect">
+                            </select>
+                        </form>
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-success btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-ok"></span> Zatvori</button>
