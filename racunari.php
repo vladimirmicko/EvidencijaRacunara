@@ -64,8 +64,8 @@
                             echo "<td>{$row->proizvodjac}</td>\n";
                             echo "<td>{$row->model}</td>\n";
                             echo "<td>{$row->ime}</td>\n";
-                            echo "<td><button onclick='izmena({$row->id})' class='btn btn-success'><span class='glyphicon glyphicon-pencil'></span></button></td>\n";
-                            echo "<td><button onclick='potvrdaBrisanja({$row->id})' class='btn btn-danger'><span class='glyphicon glyphicon-trash'></span></button></td>\n";
+                            echo "<td><button onclick='izmenaRacunara({$row->id})' class='btn btn-success'><span class='glyphicon glyphicon-pencil'></span></button></td>\n";
+                            echo "<td><button onclick='potvrdaBrisanjaRacunara({$row->id})' class='btn btn-danger'><span class='glyphicon glyphicon-trash'></span></button></td>\n";
                             echo "</tr>\n";
                         }
                         ?>
@@ -73,8 +73,6 @@
                 </table>
             </div>
         </div>
-
-
         <!--MiddleRow END-->
         <!--BottomRow Begin-->
         <div id="bottomrow">
@@ -89,5 +87,35 @@
             <div class="foot"> <span>&copy;</span>  <a href="">Vladimir Randelovic, 2017.</a></div>
         </div>
         <!--Footer END-->
+        
+        <!-- Modal -->
+        <div class="modal fade" id="dodavanjeModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:35px 50px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><span class="glyphicon glyphicon-plus"></span> Dodavanje računara</h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <form role="form" action="dodavanje-racunara.php" method="post">
+                            <div class="form-group">
+                                <label for="proizvodjac"><span class="glyphicon glyphicon-user"></span> Proizvodjač</label>
+                                <input type="text" name="proizvodjac" class="form-control" id="ime" placeholder="proizvodjac"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="model"><span class="glyphicon glyphicon-user"></span> Model</label>
+                                <input type="text" name="model" class="form-control" id="model" placeholder="model"/>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-plus"></span> Unesi računar</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Odustani</button>
+                    </div>
+                </div>
+            </div>
+        </div>     
     </body>
 </html>
