@@ -52,15 +52,9 @@ function prikazPC(id){
             if (this.readyState == 4 && this.status == 200) {
                 var racunari = JSON.parse(this.responseText);
                 
-                
-                
-                document.getElementById("korisnik_id").value = korisnik.id;
-                document.getElementById("ime").value = korisnik.ime;
-                document.getElementById("prezime").value = korisnik.prezime;
-                document.getElementById("odeljenje").value = korisnik.odeljenje;
             }
         };
-        xmlhttp.open("GET", "prikazKorisnika.php?id=" + id, true);
+        xmlhttp.open("GET", "prikazPC.php?id=" + id, true);
         xmlhttp.send();
 }
 
