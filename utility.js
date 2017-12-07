@@ -62,8 +62,13 @@ function popunaPCtabele(id) {
         if (this.readyState == 4 && this.status == 200) {
             var racunari = JSON.parse(this.responseText);
             var table = document.getElementById("prikazPCtabela");
-            table.removeChild(table.getElementsByTagName("tbody")[0]);
 
+            elementi = table.getElementsByTagName("tbody");
+
+            for (i = 0; i < elementi.length; i++)
+            {
+                table.removeChild(elementi[i]);
+            }
             var tableBody = document.createElement('tbody');
 
             racunari.forEach(function (rowData) {
