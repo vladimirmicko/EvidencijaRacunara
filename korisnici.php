@@ -210,11 +210,8 @@
                                     <th scope="col">Model</th>
                                 </tr>
                             </thead>
- 
+                            <tbody></tbody>
                         </table>                        
-
-
-
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-success btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-ok"></span> Zatvori</button>

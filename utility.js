@@ -62,21 +62,23 @@ function popunaPCtabele(id) {
         if (this.readyState == 4 && this.status == 200) {
             var racunari = JSON.parse(this.responseText);
             var table = document.getElementById("prikazPCtabela");
+            table.removeChild(table.getElementsByTagName("tbody")[0]);
+
             var tableBody = document.createElement('tbody');
 
             racunari.forEach(function (rowData) {
                 var row = document.createElement('tr');
-                    var cell = document.createElement('td');
-                    cell.appendChild(document.createTextNode(rowData.id));
-                    row.appendChild(cell);
+                var cell = document.createElement('td');
+                cell.appendChild(document.createTextNode(rowData.id));
+                row.appendChild(cell);
 
-                    var cell = document.createElement('td');
-                    cell.appendChild(document.createTextNode(rowData.proizvodjac));
-                    row.appendChild(cell);
+                var cell = document.createElement('td');
+                cell.appendChild(document.createTextNode(rowData.proizvodjac));
+                row.appendChild(cell);
 
-                    var cell = document.createElement('td');
-                    cell.appendChild(document.createTextNode(rowData.model));
-                    row.appendChild(cell);
+                var cell = document.createElement('td');
+                cell.appendChild(document.createTextNode(rowData.model));
+                row.appendChild(cell);
 
                 tableBody.appendChild(row);
             });
