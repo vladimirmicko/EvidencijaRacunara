@@ -59,7 +59,6 @@
                         if (!$rezultat)
                             die(mysqli_error($bp));
 
-//                        $function_call="onclick='someFunction(e)'";
                         while ($row = mysqli_fetch_object($rezultat)) {
                             echo "<tr>\n";
                             echo "<td>{$row->id}</td>\n";

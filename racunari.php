@@ -30,9 +30,51 @@
         </div>
         <!--Header END-->
         <!--MiddleRow Begin-->
-        <div id="midrow">
+        <div>
+            <div class="container">
+                <!-- Trigger the modal with a button -->
+                <br />
+                <button type="button" class="btn btn-info btn-lg pool-right" data-toggle="modal" data-target="#dodavanjeModal">+</button>
 
+                <!--Table-->
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Proizvodjac</th>
+                            <th scope="col">Model</th>
+                            <th scope="col">Korisnik</th>
+                            <th scope="col" width="5%">Izmena</th>
+                            <th scope="col" width="5%">Brisanje</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $bp = mysqli_connect("localhost", "root", "root", "evidencija_racunara");
+                        if (!$bp)
+                            die("Greska pri pristupu bazi podataka.");
+
+                        $rezultat = mysqli_query($bp, "select * from racunari left join korisnici on racunari.korisnik_id=korisnici.id");
+                        if (!$rezultat)
+                            die(mysqli_error($bp));
+
+                        while ($row = mysqli_fetch_object($rezultat)) {
+                            echo "<tr>\n";
+                            echo "<td>{$row->id}</td>\n";
+                            echo "<td>{$row->proizvodjac}</td>\n";
+                            echo "<td>{$row->model}</td>\n";
+                            echo "<td>{$row->ime}</td>\n";
+                            echo "<td><button onclick='izmena({$row->id})' class='btn btn-success'><span class='glyphicon glyphicon-pencil'></span></button></td>\n";
+                            echo "<td><button onclick='potvrdaBrisanja({$row->id})' class='btn btn-danger'><span class='glyphicon glyphicon-trash'></span></button></td>\n";
+                            echo "</tr>\n";
+                        }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
+
         <!--MiddleRow END-->
         <!--BottomRow Begin-->
         <div id="bottomrow">
