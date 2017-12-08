@@ -64,7 +64,7 @@
                             echo "<td>{$row->proizvodjac}</td>\n";
                             echo "<td>{$row->model}</td>\n";
                             echo "<td>{$row->ime}</td>\n";
-                            echo "<td><button onclick='izmenaRacunara({$row->id})' class='btn btn-success'><span class='glyphicon glyphicon-pencil'></span></button></td>\n";
+                            echo "<td><button onclick='odabirKorisnika({$row->id})' class='btn btn-success'><span class='glyphicon glyphicon-pencil'></span></button></td>\n";
                             echo "<td><button onclick='potvrdaBrisanja({$row->id})' class='btn btn-danger'><span class='glyphicon glyphicon-trash'></span></button></td>\n";
                             echo "</tr>\n";
                         }
@@ -102,7 +102,7 @@
                         <form role="form" action="dodavanje-racunara.php" method="post">
                             <div class="form-group">
                                 <label for="proizvodjac"><span class="glyphicon glyphicon-user"></span> Proizvodjač</label>
-                                <input type="text" name="proizvodjac" class="form-control" id="ime" placeholder="proizvodjac"/>
+                                <input type="text" name="proizvodjac" class="form-control" id="proizvodjac" placeholder="proizvodjac"/>
                             </div>
                             <div class="form-group">
                                 <label for="model"><span class="glyphicon glyphicon-user"></span> Model</label>
@@ -122,6 +122,42 @@
             </div>
         </div>     
 
+
+        <!-- Modal -->
+        <div class="modal fade" id="izmenaModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:35px 50px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><span class="glyphicon glyphicon-pencil"></span> Izmena računara</h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <form role="form" action="izmena-racunara.php" method="post">
+                            <input type="hidden" name="racunar_id" id="racunar_id"  />
+                            <div class="form-group">
+                                <label for="izmenaProizvodjaca"><span class="glyphicon glyphicon-user"></span> Proizvodjač</label>
+                                <input type="text" name="izmenaProizvodjaca" class="form-control" id="izmenaProizvodjaca" placeholder="izmenaProizvodjaca"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="izmenaModela"><span class="glyphicon glyphicon-user"></span> Model</label>
+                                <input type="text" name="izmenaModela" class="form-control" id="izmenaModela" placeholder="izmenaModela"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="izmenaKorisnika"><span class="glyphicon glyphicon-user"></span> Korisnik</label>
+                                <select name="izmenaKorisnika" class="form-control" placeholder="izmenaKorisnika" id="izmenaKorisnika"></select>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-pencil"></span> Izmeni računar</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Odustani</button>
+                    </div>
+                </div>
+            </div>
+        </div>     
+        </div>
+        </div> 
 
         <!-- Modal -->
         <div class="modal fade" id="brisanjeModal" role="dialog">

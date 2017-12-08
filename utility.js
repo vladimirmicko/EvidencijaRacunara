@@ -27,6 +27,45 @@ function izmena(id)
 
 }
 
+
+function izmenaRacunara(id){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var racunar = JSON.parse(this.responseText);
+            document.getElementById("racunar_id").value = racunar.id;
+            document.getElementById("izmenaProizvodjaca").value = racunar.proizvodjac;
+            document.getElementById("izmenaModela").value = racunar.model;
+            document.getElementById("izmenaKorisnika").value = racunar.korisnik_id;
+        }
+    };
+    xmlhttp.open("GET", "prikazRacunara.php?id=" + id, true);
+    xmlhttp.send();
+    $("#izmenaModal").modal();
+}
+
+
+function odabirKorisnika(id) {
+    select = document.getElementById('izmenaKorisnika');
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var korisnici = JSON.parse(this.responseText);
+            korisnici.forEach(function (rowData) {
+                var opt = document.createElement('option');
+                opt.value = rowData.id;
+                string="".concat(rowData.ime,", ",rowData.prezime,", ",rowData.odeljenje);
+                opt.innerHTML = string;
+                select.appendChild(opt);
+            });
+            izmenaRacunara(id);
+        }
+    };
+    xmlhttp.open("GET", "prikazSvihKorisnika.php", true);
+    xmlhttp.send();
+}
+
+
 function dodavanjeRacunara() {
     select = document.getElementById('selectKorisnici');
     var xmlhttp = new XMLHttpRequest();
@@ -45,6 +84,8 @@ function dodavanjeRacunara() {
     xmlhttp.open("GET", "prikazSvihKorisnika.php", true);
     xmlhttp.send();
 }
+
+
 
 function prikazKorisnika(id) {
     var xmlhttp = new XMLHttpRequest();
