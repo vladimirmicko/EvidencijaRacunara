@@ -34,7 +34,7 @@
             <div class="container">
                 <!-- Trigger the modal with a button -->
                 <br />
-                <button type="button" class="btn btn-info btn-lg pool-right" data-toggle="modal" data-target="#dodavanjeModal">+</button>
+                <button type="button" onClick="dodavanjeRacunara()" class="btn btn-info btn-lg pool-right" data-toggle="modal" data-target="#dodavanjeModal">+</button>
 
                 <!--Table-->
                 <table class="table table-striped">
@@ -87,7 +87,7 @@
             <div class="foot"> <span>&copy;</span>  <a href="">Vladimir Randelovic, 2017.</a></div>
         </div>
         <!--Footer END-->
-        
+
         <!-- Modal -->
         <div class="modal fade" id="dodavanjeModal" role="dialog">
             <div class="modal-dialog">
@@ -108,6 +108,9 @@
                                 <label for="model"><span class="glyphicon glyphicon-user"></span> Model</label>
                                 <input type="text" name="model" class="form-control" id="model" placeholder="model"/>
                             </div>
+                            <div class="form-group">
+                                <select id="selectKorisnici"></select>
+                            </div>
                             <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-plus"></span> Unesi računar</button>
                         </form>
                     </div>
@@ -117,8 +120,8 @@
                 </div>
             </div>
         </div>     
-        
-        
+
+
         <!-- Modal -->
         <div class="modal fade" id="brisanjeModal" role="dialog">
             <div class="modal-dialog">

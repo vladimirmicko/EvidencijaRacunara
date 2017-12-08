@@ -27,6 +27,25 @@ function izmena(id)
 
 }
 
+function dodavanjeRacunara() {
+    select = document.getElementById('selectKorisnici');
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var korisnici = JSON.parse(this.responseText);
+            korisnici.forEach(function (rowData) {
+                var opt = document.createElement('option');
+                opt.value = rowData.id;
+                string="".concat(rowData.ime,", ",rowData.prezime,", ",rowData.odeljenje);
+                opt.innerHTML = string;
+                select.appendChild(opt);
+            });
+        }
+    };
+    xmlhttp.open("GET", "prikazSvihKorisnika.php", true);
+    xmlhttp.send();
+}
+
 function prikazKorisnika(id) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
