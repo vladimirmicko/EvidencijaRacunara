@@ -129,16 +129,16 @@
                         <form role="form" action="izmena-korisnika.php" method="post">
                             <input type="hidden" name="korisnik_id" id="korisnik_id"  />
                             <div class="form-group">
-                                <label for="ime"><span class="glyphicon glyphicon-user"></span> Ime</label>
-                                <input type="text" name="ime" class="form-control" id="ime" placeholder="ime"/>
+                                <label for="izmenaImena"><span class="glyphicon glyphicon-user"></span> Ime</label>
+                                <input type="text" name="izmenaImena" class="form-control" id="izmenaImena" placeholder="Ime"/>
                             </div>
                             <div class="form-group">
-                                <label for="prezime"><span class="glyphicon glyphicon-user"></span> Prezime</label>
-                                <input type="text" name="prezime" class="form-control" id="prezime" placeholder="prezime"/>
+                                <label for="izmenaPrezimena"><span class="glyphicon glyphicon-user"></span> Prezime</label>
+                                <input type="text" name="izmenaPrezimena" class="form-control" id="izmenaPrezimena" placeholder="Prezime"/>
                             </div>
                             <div class="form-group">
-                                <label for="odeljenje"><span class="glyphicon glyphicon-user"></span> Odeljenje</label>
-                                <input type="text" name="odeljenje" class="form-control" id="odeljenje" placeholder="odeljenje"/>
+                                <label for="izmenaOdeljenja"><span class="glyphicon glyphicon-user"></span> Odeljenje</label>
+                                <input type="text" name="izmenaOdeljenja" class="form-control" id="izmenaOdeljenja" placeholder="Odeljenje"/>
                             </div>
 
                             <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-pencil"></span> Izmeni korisnika</button>
