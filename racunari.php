@@ -109,7 +109,8 @@
                                 <input type="text" name="model" class="form-control" id="model" placeholder="model"/>
                             </div>
                             <div class="form-group">
-                                <select id="selectKorisnici"></select>
+                                <label for="selectKorisnici"><span class="glyphicon glyphicon-user"></span> Korisnik</label>
+                                <select name="selectKorisnici" class="form-control" placeholder="selectKorisnici" id="selectKorisnici"></select>
                             </div>
                             <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-plus"></span> Unesi računar</button>
                         </form>

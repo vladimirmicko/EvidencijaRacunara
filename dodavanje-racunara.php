@@ -6,9 +6,9 @@ if (!$bp)
 
 $proizvodjac = mysqli_real_escape_string($bp, @$_POST['proizvodjac']);
 $model = mysqli_real_escape_string($bp, @$_POST['model']);
+$selectKorisnici = mysqli_real_escape_string($bp, @$_POST['selectKorisnici']);
 
-$korisnik_id=62;
-$upit = "insert into racunari (proizvodjac, model, korisnik_id) values ('$proizvodjac','$model','$korisnik_id');";
+$upit = "insert into racunari (proizvodjac, model, korisnik_id) values ('$proizvodjac','$model','$selectKorisnici');";
 $rezultat = mysqli_query($bp, $upit);
 if (!$rezultat)
     die(mysqli_error($bp));
