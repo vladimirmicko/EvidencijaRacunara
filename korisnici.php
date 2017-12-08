@@ -196,7 +196,7 @@
                 <div class="modal-content">
                     <div class="modal-header" style="padding:35px 50px;">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4><span class="glyphicon glyphicon-plus"></span> Prikaz racunara</h4>
+                        <h4><span class="glyphicon glyphicon-eye-open"></span> Prikaz racunara</h4>
                     </div>
                     <div class="modal-body" style="padding:40px 50px;">
 
